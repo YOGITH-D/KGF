@@ -94,10 +94,15 @@ body.no-scroll{
     color: crimson;
 }
 
+.froth-logo-div:hover{
+    text-decoration: none;
+    color: crimson;
+}
 
 .froth-logo{
     width: 200px;
     height: 30px; 
+    font-weight: bold;
 }
 
 .nav-link-div{
@@ -124,13 +129,14 @@ body.no-scroll{
 
 .home-text-div:hover .home-text {
     color: crimson; 
+    text-decoration: none;
 }
 
 .home-text:hover{
     color: crimson;
 }
 
-a:hover {
+.navbar-div a:hover {
     text-decoration: none;
 }
 
@@ -185,12 +191,13 @@ a:hover {
     padding: 20px 20px;
     border-radius: 20px;
     box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.5);
-    max-height: 520px;
+    max-height: 620px;
     
 }
 
 .input-div{
     color: white;  
+    height: 70px;
 }
 
 .input-text{
@@ -201,6 +208,7 @@ a:hover {
     padding: 4px;
     font-weight: bold;
     background-color: rgba(250, 249, 249, 0.951);
+    height: 30px;
 }
 
 .predict-btn::before{

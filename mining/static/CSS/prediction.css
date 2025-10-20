@@ -172,10 +172,12 @@ body.no-scroll{
     font-family: "Roboto";
     font-weight: bold;
     color: black;
+    z-index: 5;
 }
 
 .cancel-result:hover{
     color: crimson;
+    text-decoration: none;
 }
 
 .instructions{

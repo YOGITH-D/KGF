@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silica Concentration </title>
+    <link rel="stylesheet" href="../static/CSS/prediction.css">
+    <link rel="stylesheet" href="../static/CSS/home.css">
+
+    
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mozilla+Headline:wght@200..700&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<body> 
+
+    <div class="navbar-div">
+            <a href="#" class="froth-logo-div" >
+            <h2>Kaizen Geo-Metallurgical Framework</h2>
+            </a>
+        {% if current_user.is_authenticated %}
+            <div class="nav-link-div">
+            <a href="{{ url_for('home_page') }}" class="home-text-div">
+            <span class="home-text">Home</span>
+            </a>
+            <a href="{{url_for('login_page')}}" class="home-text-div">
+            <span class="home-text">Welcome {{ current_user.username }}!</span>
+            </a>
+            <a href="{{url_for('logout_page')}}" class="home-text-div">
+            <span class="home-text">Logout</span>
+            </a>
+            <a href="" class="home-text-div1" style="margin-right: 40px;">
+            <span class="home-text">Features</span>
+            </a>
+            </div>
+        {% else %}
+            <div class="nav-link-div">
+            <a href="{{ url_for('home_page') }}" class="home-text-div">
+            <span class="home-text">Home</span>
+            </a>
+            <a href="{{ url_for('login_page') }}" class="home-text-div">
+            <span class="home-text">Login</span>
+            </a>
+            <a href="{{ url_for('register_page') }}" class="home-text-div" style="margin-right: 40px;">
+            <span class="home-text">Register</span>
+            </a>
+            </div>
+        {% endif %}
+    </div>
+
+    {% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category,message in messages %}
+                <div class="alert alert-{{category}}" role="alert">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+
+    <a href="" class="cancel">X</a>
+    <div class="sidebar-div">
+        
+        <div class="sidebar-contents">
+            <h1 class="sidebar-title">Feature Summary</h1>
+            <h2 class="feature-names">% Iron Feed -</h2><p class="feature-defintion">Percentage of iron in the incoming ore feed.</p>
+
+            <br>
+            <h2 class="feature-names">% Silica Feed -</h2><p class="feature-defintion">Percentage of silica (impurity) in the incoming ore feed.</p>
+
+            <br>
+            <h2 class="feature-names">Starch Flow -</h2><p class="feature-defintion">Amount of starch added (used as a depressant to prevent iron particles from floating).</p>
+
+            <br>
+            <h2 class="feature-names">Amina Flow -</h2><p class="feature-defintion">Amount of amine reagent added (collector that helps silica particles attach to bubbles and float).</p>
+
+            <br>
+            <h2 class="feature-names">Ore Pulp Flow -</h2><p class="feature-defintion">Volume/flow rate of the ore slurry entering the flotation system.</p>
+
+            <br>
+            <h2 class="feature-names">Ore Pulp pH -</h2><p class="feature-defintion">Acidity/alkalinity of the ore slurry, which affects reagent performance.</p>
+
+            <br>
+            <h2 class="feature-names">Ore Pulp Density -</h2><p class="feature-defintion">Concentration of solids in the slurry (how thick or diluted the pulp is).</p>
+
+            <br>
+            <h2 class="feature-names">Flotation Column Air Flow (1-7) -</h2><p class="feature-defintion">Air injected into each flotation column. controls bubble generation for particle attachment.</p>
+
+            <br>
+            <h2 class="feature-names">Flotation Column Level (1-7) -</h2><p class="feature-defintion">Height of slurry/froth in each flotation column. affects froth stability and separation efficiency.</p>
+
+            <br>
+            <br>
+        </div> 
+    </div>
+
+    
+    <div class="wrapper">
+        <div class="container-div">
+            <div class="input-div">
+                <div class="input-text">% Iron Feed</div>
+                <input type="text" placeholder="enter value" class="text-box" id="%Iron Feed">
+            </div>   
+            <div class="input-div">
+                <div class="input-text">% Silica Feed</div>
+                <input type="text" placeholder="enter value" class="text-box" id="% Silica Feed">
+            </div> 
+            <div class="input-div">
+                <div class="input-text">Starch Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Starch Flow">
+            </div>  
+            <div class="input-div">
+                <div class="input-text">Amina Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Amina Flow">
+            </div> 
+
+
+
+            <div class="input-div">
+                <div class="input-text">Ore Pulp Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Ore Pulp Flow">
+            </div>   
+            <div class="input-div">
+                <div class="input-text">Ore Pulp pH</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Ore Pulp pH">
+            </div> 
+            <div class="input-div">
+                <div class="input-text">Ore Pulp Density</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Ore Pulp Density">
+            </div>  
+            <div class="input-div">
+                <div class="input-text">Flotation Column 01 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 01 Air Flow">
+            </div> 
+            
+
+
+            <div class="input-div">
+                <div class="input-text">Flotation Column 02 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 02 Air Flow">
+            </div>   
+            <div class="input-div">
+                <div class="input-text">Flotation Column 03 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 03 Air Flow">
+            </div> 
+            <div class="input-div">
+                <div class="input-text">Flotation Column 04 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 04 Air Flow">
+            </div>  
+            <div class="input-div">
+                <div class="input-text">Flotation Column 05 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 05 Air Flow">
+            </div> 
+
+
+            <div class="input-div">
+                <div class="input-text">Flotation Column 06 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 06 Air Flow">
+            </div>   
+            <div class="input-div">
+                <div class="input-text">Flotation Column 07 Air Flow</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 07 Air Flow">
+            </div> 
+            <div class="input-div">
+                <div class="input-text">Flotation Column 01 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 01 Level">
+            </div>  
+            <div class="input-div">
+                <div class="input-text">Flotation Column 02 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 02 Level">
+            </div> 
+
+
+            <div class="input-div">
+                <div class="input-text">Flotation Column 03 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 03 Level">
+            </div>   
+            <div class="input-div">
+                <div class="input-text">Flotation Column 04 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 04 Level">
+            </div> 
+            <div class="input-div">
+                <div class="input-text">Flotation Column 05 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 05 Level">
+            </div>  
+            <div class="input-div">
+                <div class="input-text">Flotation Column 06 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 06 Level">
+            </div> 
+
+
+            <div class="input-div" >
+                <div class="input-text">Flotation Column 07 Level</div>
+                <input type="text" placeholder="enter value" class="text-box" id="Flotation Column 07 Level">
+            </div>   
+        
+        </div>
+        <button class="predict-btn" onclick="showResult();"><span>Predict</span></button>
+        <div class="result-container">
+            <a href="" class="cancel-result">X</a>
+        </div>
+    </div>
+
+    <div class="contact-us-div">
+        <div class="contact-us-text">Contact Us</div>
+        <div class="contact-us-subtext">We’d love to connect with you</div>
+        <div class="contact-us-logo">
+            <a href="https://www.linkedin.com/in/yogith-gowda-080600293/" target="_blank">
+                <img src="../static/IMAGES/linklogo.png" class="linkdin-logo" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/Yogith_05" target="_blank">
+                    <img src="../static/IMAGES/twitterx.png" class="linkdin-logo" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+    <script src="../static/JS/prediction.js"></script>
+    
+</body>
+</html>

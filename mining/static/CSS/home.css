@@ -1,0 +1,375 @@
+body{
+    position: relative;
+    margin: 0px;
+    color: whitesmoke;
+    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+   /*background-color: whitesmoke;*/
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;               
+    height: 0;              
+}
+
+.background-img-div{
+    
+    background: url("https://www.e-mj.com/wp-content/uploads/2023/05/2-Kumba-Iron-Ore-Kolomela-Mine-DMS-Plant-min.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top;
+}
+
+
+
+
+
+.sidebar-div{
+    transform: translateX(-105%);
+    position: fixed;
+    z-index: 2;
+    background-color: whitesmoke;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    overscroll-behavior: contain;
+}
+
+.cancel{
+    transform: translateX(-400px);
+    position: fixed;
+    top: 10px;
+    left: 370px;
+    z-index: 3;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+.cancel:hover{
+    color: crimson;
+    
+}
+
+.sidebar-contents{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+}
+
+.sidebar-title{
+    font-family: "Roboto";
+    color: crimson;
+}
+
+.feature-names{
+    font-family: "Roboto";
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.feature-defintion{
+    font-size: 20px;
+    margin: 0px;
+}
+
+
+
+
+
+.navbar-div{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    background-color: rgb(231, 225, 225);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+}
+
+.froth-logo-div{
+    margin-left: 100px;
+}
+
+
+.froth-logo{
+    width: 200px;
+    height: 30px; 
+}
+
+.nav-link-div{
+    display: flex;
+    gap: 20px;
+}
+
+.home-text-div{
+    text-decoration: none;
+    color: #434343;    
+}
+
+.home-text-div1{
+    text-decoration: none;
+    color: #434343; 
+    margin-right: 60px;   
+}
+
+.home-text{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', cursive;
+}
+
+.home-text-div:hover .home-text {
+    color: crimson; 
+}
+
+.home-text:hover{
+    color: crimson;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+.webpage-content{
+    font-family: "Poppins";
+}
+
+.content1,.content2{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 60px;
+    
+}
+
+.content1 p,.content2 p{
+    font-size: 20px;
+}
+
+.conten1-image-div{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 150px;
+    gap: 30px;
+}
+
+.hematite-div,.magnetite-div,.limonite-div,.siderite-div{
+    background-color: white;
+    color: black;
+    font-weight:500;
+    border-radius: 20px;
+    box-shadow: 4px 0px 4px white; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+} 
+
+.hematite-div:hover,.magnetite-div:hover,.limonite-div:hover,.siderite-div:hover{
+    transform: scale(1.04);
+}
+
+.full-text{
+    padding: 15px;
+    font-size: 20px;
+}
+
+.short-text{
+    display: none;
+}
+
+.siderite-div{
+    margin-right: 40px;
+}
+.hematite-div img,.magnetite-div img,.limonite-div img,.siderite-div img{
+    width: 250px; 
+    height: 250px;
+}
+
+
+.content2-froth-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 4px 0px 4px white;
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    border-radius: 20px;
+}
+
+.video-div{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.video{
+    border-radius: 5px;
+}
+
+.video-explanation h1{
+    color: black;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.video-explanation p{
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 20px ;
+    padding-top: 0px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.model-image{
+    position: absolute;
+    right: 20px;
+    width: 1280px;
+    height: 720px;
+    border-radius: 20px;
+}
+
+.model-info-div{
+    margin-bottom: 50px;
+    position: relative;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.model-info{
+    background-color: white;
+    color: black;
+    min-height: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 700px;
+    margin-left: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-us-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 20px;
+    background: linear-gradient(to top, #0d0d0d, #1a1a1a);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-us-text {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-us-subtext {
+    color: #bbbbbb;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.contact-us-logo {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.linkdin-logo{
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.linkdin-logo:hover{
+    transform: scale(1.2);
+    
+}
+
+@media (max-width: 768px) {
+    .froth-logo-div {
+        margin-left: 20px; 
+    }
+    .content1,.content2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .full-text{
+        display: none;
+    }
+    .short-text{
+        display: block;
+        color: black;
+        font-size: 15px;
+        
+    }
+
+    .content2-froth-div{
+        flex-direction: column;
+    }
+    .video{
+        width: 300px;
+        height: 300px;
+        margin-left: 10px;
+    }
+
+    .model-info{
+        margin-right: 30px;
+    }
+}

@@ -72,6 +72,7 @@ body.no-scroll{
     margin: 0px;
 }
 
+
 .navbar-div{
     position: fixed;
     top: 0px;
@@ -127,7 +128,7 @@ body.no-scroll{
     font-family: 'Roboto', cursive;
 }
 
-.home-text-div:hover .home-text {
+.home-text-div:hover{
     color: crimson; 
     text-decoration: none;
 }
@@ -137,6 +138,7 @@ body.no-scroll{
 }
 
 .navbar-div a:hover {
+    color: crimson;
     text-decoration: none;
 }
 
@@ -150,35 +152,7 @@ body.no-scroll{
     gap: 20px;
 }
 
-.result-container{
-    display: none;
-    width: 500px;
-    height: 500px;
-    background-color: whitesmoke;
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
 
-.cancel-result{
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    text-decoration: none;
-    font-family: "Roboto";
-    font-weight: bold;
-    color: black;
-    z-index: 5;
-}
-
-.cancel-result:hover{
-    color: crimson;
-    text-decoration: none;
-}
 
 .instructions{
     color: black;
@@ -213,58 +187,19 @@ body.no-scroll{
     height: 30px;
 }
 
-.predict-btn::before{
-    content: "";
-    position: absolute;
-    top: var(--mouse-y);
-    left:var(--mouse-x);
-    transform: translate(-50%,-50%);
-    width: 20px;
-    /*background-color: #8b0000;*/
-    background-color:rgb(169, 6, 38);
-    height: 20px;
-    opacity: 0;
-    transition: width 0.8s, height 0.8s;
-    border-radius: 300px;
-    
+
+
+
+
+.btn-outline-danger{
+    width: 150px;
+    height: 50px;
+    margin-bottom: 100px;
 }
 
-.predict-btn{
-    position: relative;
-    padding: 10px 40px;
-    font-family: 'Roboto', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-    border: none;
-    background-color: rgba(250, 249, 249, 0.951);
-    margin-bottom: 50px;
-    
+.btn-outline-danger:hover{
+    background-color: rgb(169, 6, 38) !important;
 }
-
-.predict-btn span{
-    position: relative;
-    z-index: 1;
-}
-
-.predict-btn:hover::before{
-    opacity: 1;
-    width: 500px;
-    height: 500px;
-}
-
-.predict-btn:hover{
-    color: white;
-}
-
-.predict-btn:active{
-    opacity: 0.8;
-}
-
-
-
-
 
 
 

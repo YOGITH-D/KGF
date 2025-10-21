@@ -47,17 +47,17 @@ body::-webkit-scrollbar {
     top: 10px;
     left: 370px;
     z-index: 3;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
-    color: black;
+    color: darkgray;
     transition: transform 0.3s;
     font-weight: bold;
     font-family: "Roboto";
 }
 
 .cancel:hover{
-    color: crimson;
-    
+    color: black;
+    text-decoration: none;
 }
 
 .sidebar-contents{
@@ -68,18 +68,21 @@ body::-webkit-scrollbar {
 }
 
 .sidebar-title{
-    font-family: "Roboto";
-    color: crimson;
+    font-family: "Poppins";
+    color: black;
+    margin-bottom: 50px;
+    font-size: 35px;
 }
 
 .feature-names{
-    font-family: "Roboto";
+    font-family: "Poppins";
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .feature-defintion{
-    font-size: 20px;
+    
+    font-size: 16px;
     margin: 0px;
 }
 
@@ -142,7 +145,7 @@ body::-webkit-scrollbar {
     color: crimson;
 }
 
-a:hover {
+.navbar-div a:hover {
     text-decoration: none;
 }
 

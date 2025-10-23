@@ -1,5 +1,5 @@
 import pandas as pd
-data=pd.read_csv(r'mining\data\MiningProcess_Flotation_Plant_Database.csv')
+data=pd.read_csv('mining/data/MiningProcess_Flotation_Plant_Database.csv')
 
 def dropDuplicate(data):
     data = data.drop_duplicates()
